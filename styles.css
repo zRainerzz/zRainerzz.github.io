@@ -919,7 +919,8 @@ nav ul li a.active::after {
   z-index: 100;
 }
 
-#footer p {
+#footer p  a {
+  text-decoration:none;
   color: var(--text-secondary);
   font-size: 0.9rem;
 }
