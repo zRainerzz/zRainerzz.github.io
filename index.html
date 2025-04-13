@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>zRainerzz - Cybersecurity & Development Services</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loading-content">
+      <div class="logo-container">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+      <h1>zRainerzz</h1>
+      <div class="loading-bar-container">
+        <div class="loading-bar"></div>
+      </div>
+      <p class="loading-text">Initializing secure environment...</p>
+    </div>
+  </div>
+
+  <!-- 3D Scene Container (Full Screen) -->
+  <div id="scene-container"></div>
+
+  <!-- UI Overlay -->
+  <div id="ui-overlay">
+    <!-- Header/Navigation -->
+    <header id="header">
+      <div class="logo">
+        <i class="fas fa-shield-alt"></i>
+        <span>zRainerzz</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home-section" data-section="home" class="active">Home</a></li>
+          <li><a href="#services-section" data-section="services">Services</a></li>
+          <li><a href="#portfolio-section" data-section="portfolio">Portfolio</a></li>
+          <li><a href="#about-section" data-section="about">About</a></li>
+          <li><a href="#contact-section" data-section="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu">
+      <ul>
+        <li><a href="#home-section" data-section="home">Home</a></li>
+        <li><a href="#services-section" data-section="services">Services</a></li>
+        <li><a href="#portfolio-section" data-section="portfolio">Portfolio</a></li>
+        <li><a href="#about-section" data-section="about">About</a></li>
+        <li><a href="#contact-section" data-section="contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Content Sections (Landing Page Style) -->
+    <div id="content-sections">
+      <!-- Home Section -->
+      <section id="home-section" class="content-section">
+        <div class="section-content">
+          <h1>Secure. Develop. <span>Innovate.</span></h1>
+          <p>Professional cybersecurity and development services for the modern digital landscape.</p>
+          <div class="cta-buttons">
+            <a href="#services-section" class="btn primary" data-section="services">Explore Services</a>
+            <a href="#contact-section" class="btn secondary" data-section="contact">Get in Touch</a>
+          </div>
+          <div class="intro-section">
+            <div class="intro-content">
+              <div class="intro-text">
+                <h2>Hello, I am <span>zRainerzz</span></h2>
+                <p>Cybersecurity specialist and developer with expertise in network security, penetration testing, and full-stack development.</p>
+              </div>
+              <div class="intro-image">
+                <img src="./ghaith.jpg" alt="zRainer Profile">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services-section" class="content-section">
+        <div class="section-content">
+          <h2 class="animate-on-scroll">Our Services</h2>
+          <div class="services-grid">
+            <div class="service-card animate-on-scroll" data-service="cybersecurity">
+              <div class="service-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>Cybersecurity Services</h3>
+              <ul>
+                <li>Security Assessments & Audits</li>
+                <li>Penetration Testing</li>
+                <li>OSINT Investigations</li>
+                <li>Security Consulting</li>
+              </ul>
+              <button class="btn service-details-btn">View Details</button>
+            </div>
+            <div class="service-card animate-on-scroll" data-service="network">
+              <div class="service-icon">
+                <i class="fas fa-network-wired"></i>
+              </div>
+              <h3>Network Services</h3>
+              <ul>
+                <li>Network Design & Architecture</li>
+                <li>Network Setup & Deployment</li>
+                <li>Network Troubleshooting</li>
+                <li>Wi-Fi Setup and Security</li>
+              </ul>
+              <button class="btn service-details-btn">View Details</button>
+            </div>
+            <div class="service-card animate-on-scroll" data-service="python">
+              <div class="service-icon">
+                <i class="fab fa-python"></i>
+              </div>
+              <h3>Python Development</h3>
+              <ul>
+                <li>Custom Scripts & Automation</li>
+                <li>GUI Development</li>
+                <li>Python Training</li>
+                <li>Data Processing Tools</li>
+              </ul>
+              <button class="btn service-details-btn">View Details</button>
+            </div>
+            <div class="service-card animate-on-scroll" data-service="web">
+              <div class="service-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3>Web Development</h3>
+              <ul>
+                <li>Responsive Website Design</li>
+                <li>Full Stack Development</li>
+                <li>Django Web Apps</li>
+                <li>API Integration</li>
+              </ul>
+              <button class="btn service-details-btn">View Details</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section id="portfolio-section" class="content-section">
+        <div class="section-content">
+          <h2 class="animate-on-scroll">My Portfolio</h2>
+          <p class="section-description animate-on-scroll">Here are some of my public GitHub repositories. These are just a few of the many tools and experiments I've worked on.</p>
+          
+          <div class="portfolio-filter animate-on-scroll">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="security">Security</button>
+            <button class="filter-btn" data-filter="automation">Automation</button>
+            <button class="filter-btn" data-filter="web">Web Development</button>
+            <button class="filter-btn" data-filter="tools">Tools</button>
+          </div>
+          
+          <div class="portfolio-grid">
+            <!-- Security Projects -->
+            <div class="portfolio-item animate-on-scroll" data-category="security">
+              <div class="portfolio-card">
+                <div class="portfolio-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Security Project</h3>
+                <p>Security scripts and experiments related to network and system pentesting.</p>
+                <div class="portfolio-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Security</span>
+                </div>
+                <a href="https://github.com/zRainerzz/security-project" class="btn primary" target="_blank">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+            
+            <div class="portfolio-item animate-on-scroll" data-category="security">
+              <div class="portfolio-card">
+                <div class="portfolio-icon">
+                  <i class="fas fa-user-secret"></i>
+                </div>
+                <h3>Black Hat Python</h3>
+                <p>Scripts inspired by the Black Hat Python book — focused on offensive tools.</p>
+                <div class="portfolio-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Security</span>
+                </div>
+                <a href="https://github.com/zRainerzz/Black_Hat_Python" class="btn primary" target="_blank">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+            
+            <div class="portfolio-item animate-on-scroll" data-category="security tools">
+              <div class="portfolio-card">
+                <div class="portfolio-icon">
+                  <i class="fas fa-search"></i>
+                </div>
+                <h3>Port Scanner</h3>
+                <p>A CLI tool to scan open ports on target hosts.</p>
+                <div class="portfolio-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Networking</span>
+                </div>
+                <a href="https://github.com/zRainerzz/Port-Scanner" class="btn primary" target="_blank">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+            
+            <div class="portfolio-item animate-on-scroll" data-category="security tools">
+              <div class="portfolio-card">
+                <div class="portfolio-icon">
+                  <i class="fas fa-network-wired"></i>
+                </div>
+                <h3>Network Packet Analysis</h3>
+                <p>Packet sniffing and analysis tools for network monitoring.</p>
+                <div class="portfolio-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Networking</span>
+                </div>
+                <a href="https://github.com/zRainerzz/Network-Packet-Analysis" class="btn primary" target="_blank">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+            
+            <div class="portfolio-item animate-on-scroll" data-category="security tools">
+              <div class="portfolio-card">
+                <div class="portfolio-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>IP Tracker</h3>
+                <p>Tool to track and gather public info about IP addresses.</p>
+                <div class="portfolio-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">OSINT</span>
+                </div>
+                <a href="https://github.com/zRainerzz/ip_tracker" class="btn primary" target="_blank">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+            
+            <!-- Automation Projects -->
+            <div class="portfolio-item animate-on-scroll" data-category="automation">
+              <div class="portfolio-card">
+                <div class="portfolio-icon">
+                  <i class="fas fa-sync-alt"></i>
+                </div>
+                <h3>Log Rotation & CleanUP</h3>
+                <p>Automates log rotation and deletion for cleaner systems.</p>
+                <div class="portfolio-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Automation</span>
+                </div>
+                <a href="https://github.com/zRainerzz/Log_Rotation_-_CleanUP" class="btn primary" target="_blank">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+            
+            <div class="portfolio-item animate-on-scroll" data-category="automation">
+              <div class="portfolio-card">
+                <div class="portfolio-icon">
+                  <i class="fas fa-download"></i>
+                </div>
+                <h3>Auto Package Update</h3>
+                <p>Script to auto-update Linux packages with logging support.</p>
+                <div class="portfolio-tags">
+                  <span class="tag">Bash</span>
+                  <span class="tag">Linux</span>
+                </div>
+                <a href="https://github.com/zRainerzz/auto-package-update" class="btn primary" target="_blank">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+            
+            <!-- Web Development Projects -->
+            <div class="portfolio-item animate-on-scroll" data-category="web">
+              <div class="portfolio-card">
+                <div class="portfolio-icon">
+                  <i class="fab fa-python"></i>
+                </div>
+                <h3>Django Backend Course</h3>
+                <p>Projects and exercises from a Django backend development course.</p>
+                <div class="portfolio-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Django</span>
+                </div>
+                <a href="https://github.com/zRainerzz/Python-Backend-Web-Development-Course--with-Django-" class="btn primary" target="_blank">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+            
+            <div class="portfolio-item animate-on-scroll" data-category="web">
+              <div class="portfolio-card">
+                <div class="portfolio-icon">
+                  <i class="fab fa-python"></i>
+                </div>
+                <h3>Flask Tutorial</h3>
+                <p>Flask tutorials and small web app examples for learning.</p>
+                <div class="portfolio-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Flask</span>
+                </div>
+                <a href="https://github.com/zRainerzz/Flask_tuto" class="btn primary" target="_blank">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+            
+            <div class="portfolio-item animate-on-scroll" data-category="web">
+              <div class="portfolio-card">
+                <div class="portfolio-icon">
+                  <i class="fab fa-python"></i>
+                </div>
+                <h3>Practice Django</h3>
+                <p>Basic Django app(s) for practicing models, views, and routing.</p>
+                <div class="portfolio-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Django</span>
+                </div>
+                <a href="https://github.com/zRainerzz/practice-django" class="btn primary" target="_blank">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+            
+            <!-- Tools Projects -->
+            <div class="portfolio-item animate-on-scroll" data-category="tools">
+              <div class="portfolio-card">
+                <div class="portfolio-icon">
+                  <i class="fas fa-desktop"></i>
+                </div>
+                <h3>PyNeofetch</h3>
+                <p>A Python clone of Neofetch to display system info in the terminal.</p>
+                <div class="portfolio-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">CLI</span>
+                </div>
+                <a href="https://github.com/zRainerzz/PyNeofetch" class="btn primary" target="_blank">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+            
+            <div class="portfolio-item animate-on-scroll" data-category="tools">
+              <div class="portfolio-card">
+                <div class="portfolio-icon">
+                  <i class="fas fa-fire"></i>
+                </div>
+                <h3>Fedora Firewall Config</h3>
+                <p>Tool to configure and manage Fedora firewall rules quickly.</p>
+                <div class="portfolio-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Linux</span>
+                </div>
+                <a href="https://github.com/zRainerzz/Fedora_Firewall_Config" class="btn primary" target="_blank">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+            
+            <div class="portfolio-item animate-on-scroll" data-category="tools">
+              <div class="portfolio-card">
+                <div class="portfolio-icon">
+                  <i class="fas fa-images"></i>
+                </div>
+                <h3>GIFMake GUI</h3>
+                <p>A GUI-based Python app for generating GIFs from images.</p>
+                <div class="portfolio-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">GUI</span>
+                </div>
+                <a href="https://github.com/zRainerzz/GIFMake_GUI" class="btn primary" target="_blank">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+            
+            <div class="portfolio-item animate-on-scroll" data-category="tools">
+              <div class="portfolio-card">
+                <div class="portfolio-icon">
+                  <i class="fas fa-qrcode"></i>
+                </div>
+                <h3>QR-Code Generator</h3>
+                <p>Generates QR codes from text input using Python libraries.</p>
+                <div class="portfolio-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">QR Code</span>
+                </div>
+                <a href="https://github.com/zRainerzz/QR-Code_Generator" class="btn primary" target="_blank">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+            
+            <div class="portfolio-item animate-on-scroll" data-category="tools">
+              <div class="portfolio-card">
+                <div class="portfolio-icon">
+                  <i class="fas fa-qrcode"></i>
+                </div>
+                <h3>QR-Code Scanner</h3>
+                <p>Decodes and reads QR codes from images using Python.</p>
+                <div class="portfolio-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">QR Code</span>
+                </div>
+                <a href="https://github.com/zRainerzz/QR-Code_scanner" class="btn primary" target="_blank">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- About Section -->
+<section id="about-section" class="content-section">
+  <div class="section-content">
+    <h2 class="animate-on-scroll">About zRainerzz</h2>
+    <div class="about-content">
+      <div class="about-text-column animate-on-scroll">
+        <h3>self-taught expert</h3>
+        <p>zRainerzz is a premier provider of cybersecurity and development services, dedicated to helping businesses and individuals secure their digital assets and build robust technical solutions.</p>
+        <p>With expertise spanning cybersecurity, network services, Python development, and web development, we offer comprehensive solutions tailored to your specific needs.</p>
+        <p>My mission is to bridge the gap between security and functionality, ensuring that your digital presence is not only secure but also efficient and user-friendly.</p>
+      </div>
+      <div class="about-image-column animate-on-scroll">
+        <div class="about-image-container">
+          <img src="./solo_leveling_green_me.png" alt="zRainerzz at work" class="about-image">
+          <div class="image-overlay"></div>
+        </div>
+      </div>
+    </div>
+    <div class="stats-container">
+      <div class="stat-box animate-on-scroll">
+        <div class="stat-number">100+</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div class="stat-box animate-on-scroll">
+        <div class="stat-number">50+</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat-box animate-on-scroll">
+        <div class="stat-number">5+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- Contact Section -->
+      <section id="contact-section" class="content-section">
+        <div class="section-content">
+          <h2 class="animate-on-scroll">Get In Touch</h2>
+          <div class="contact-container">
+            <div class="contact-info animate-on-scroll">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <p>contact@zrainerzz.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <h4>Phone</h4>
+                  <p>+1 (555) 123-4567</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>Location</h4>
+                  <p>Remote Services Worldwide</p>
+                </div>
+              </div>
+              <div class="social-links">
+                <a href="https://www.linkedin.com/in/khedhri-ghaith-724446208/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="http://github.com/zRainerzz/" class="social-icon"><i class="fab fa-github"></i></a>
+                
+                <a href="https://discord.gg/YFRnT2VxZD" class="social-icon"><i class="fab fa-discord"></i></a>
+              </div>
+            </div>
+            <div class="contact-form animate-on-scroll">
+              <form action="https://api.web3forms.com/submit" method="POST" class="pageclip-form" >
+                <input type="hidden" name="access_key" value="55a69610-03cd-4b7f-ad5e-ee5818fb2096">
+                <div class="form-group">
+                  <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                  <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                  <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                </div> 
+                <div class="form-group">
+                  <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <input type="hidden" name="redirect" value="https://ghaithkhedhri.me/thankyou.html">
+
+                <button type="submit" class="btn primary pageclip-form__submit" >Send Message</button>
+              </form>
+             
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Service Details Modal -->
+    <div id="service-details-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div id="modal-content-cybersecurity" class="modal-service-content">
+          <h3>Cybersecurity Services</h3>
+          <div class="modal-service-details">
+            <div class="service-detail-group">
+              <h4>Security+ / General Security</h4>
+              <ul>
+                <li>Security Assessments & Audits</li>
+                <li>Implementation of Security Protocols</li>
+                <li>Security Awareness Training</li>
+                <li>Endpoint Security Setup</li>
+                <li>Secure System Hardening</li>
+                <li>Policy Creation</li>
+              </ul>
+            </div>
+            <div class="service-detail-group">
+              <h4>Ethical Hacking & Pentesting</h4>
+              <ul>
+                <li>Full Penetration Testing</li>
+                <li>Vulnerability Assessments</li>
+                <li>Remediation Planning & Reporting</li>
+                <li>Social Engineering Simulations</li>
+                <li>Wireless Network Hacking Tests</li>
+              </ul>
+            </div>
+            <div class="service-detail-group">
+              <h4>OSINT & Consulting</h4>
+              <ul>
+                <li>OSINT Investigations</li>
+                <li>Digital Footprint Mapping</li>
+                <li>Threat Actor Profiling</li>
+                <li>Incident Response Planning</li>
+                <li>Security Consulting</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="modal-content-network" class="modal-service-content">
+          <h3>Network Services</h3>
+          <div class="modal-service-details">
+            <div class="service-detail-group">
+              <h4>Network+ Skills</h4>
+              <ul>
+                <li>Network Design & Architecture</li>
+                <li>Network Setup & Deployment (SOHO)</li>
+                <li>Network Troubleshooting & Optimization</li>
+                <li>Secure Router & Switch Configuration</li>
+                <li>Wi-Fi Setup and Security</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="modal-content-python" class="modal-service-content">
+          <h3>Python Development</h3>
+          <div class="modal-service-details">
+            <div class="service-detail-group">
+              <h4>General Python Programming</h4>
+              <ul>
+                <li>Custom Scripts / Automation</li>
+                <li>Task Scheduling & Log Automation</li>
+                <li>File Handling & Data Parsing Tools</li>
+              </ul>
+            </div>
+            <div class="service-detail-group">
+              <h4>GUI Development</h4>
+              <ul>
+                <li>Desktop App Development</li>
+                <li>Cross-Platform GUI Apps</li>
+                <li>GUI Fixes & Enhancement</li>
+              </ul>
+            </div>
+            <div class="service-detail-group">
+              <h4>Python Education</h4>
+              <ul>
+                <li>Python Training (Beginner to Advanced)</li>
+                <li>Full-day Workshop / Coaching</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="modal-content-web" class="modal-service-content">
+          <h3>Web Development</h3>
+          <div class="modal-service-details">
+            <div class="service-detail-group">
+              <h4>Frontend (HTML/CSS/JS)</h4>
+              <ul>
+                <li>Responsive Website Design</li>
+                <li>Interactive JS Features</li>
+                <li>UX/UI Optimization</li>
+                <li>Website Debugging & Fixes</li>
+              </ul>
+            </div>
+            <div class="service-detail-group">
+              <h4>Backend (Django)</h4>
+              <ul>
+                <li>Full Django Web Apps</li>
+                <li>Secure Authentication Systems</li>
+                <li>API Integration</li>
+                <li>Admin Panel Customization</li>
+              </ul>
+            </div>
+            <div class="service-detail-group">
+              <h4>Full Stack</h4>
+              <ul>
+                <li>Complete Website (Frontend + Backend)</li>
+                <li>Portfolio Website with Contact Forms & CMS</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <p>&copy; 2025 zRainerzz. All Rights Reserved.</p>
+<a href="www.amennoomen.com" target="_blanc"  >Developed By Amen Allah Naamen</a>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+ 
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0B0C10',
+                        secondary: '#064420',
+                        accent: '#3d1dcf',
+                        'accent-alt': '#dcd6f7',
+                        'text-primary': '#E0E0E0',
+                        'text-secondary': '#7E8F7C',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'spin-slow': 'spin 8s linear infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'fade-in': 'fadeIn 1.5s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0B0C10;
+            color: #E0E0E0;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .cube {
+            transform-style: preserve-3d;
+            transform: rotateX(-30deg) rotateY(45deg);
+            transition: all 0.3s ease;
+        }
+
+        .cube:hover {
+            transform: rotateX(-20deg) rotateY(55deg);
+        }
+
+        .cube-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: visible;
+            transform-style: preserve-3d;
+        }
+
+        .front { transform: translateZ(50px); }
+        .back { transform: rotateY(180deg) translateZ(50px); }
+        .right { transform: rotateY(90deg) translateZ(50px); }
+        .left { transform: rotateY(-90deg) translateZ(50px); }
+        .top { transform: rotateX(90deg) translateZ(50px); }
+        .bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+        .check-mark {
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100;
+            animation: dash 2s ease-in-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        .glow {
+            filter: drop-shadow(0 0 15px rgba(61, 29, 207, 0.7));
+        }
+
+        .card {
+            backdrop-filter: blur(10px);
+            background: rgba(6, 68, 32, 0.3);
+            border: 1px solid rgba(220, 214, 247, 0.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+    <div class="card rounded-2xl p-8 md:p-12 max-w-3xl w-full mx-auto animate-fade-in">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+            <!-- 3D Animated Cube -->
+            <div class="relative w-40 h-40 md:w-48 md:h-48 perspective-1000 animate-float">
+                <div class="cube w-full h-full relative animate-spin-slow">
+                    <!-- Cube Faces -->
+                    <div class="cube-face front bg-accent/20 border-2 border-accent rounded-lg flex items-center justify-center">
+                        <svg class="w-16 h-16 text-accent-alt glow" viewBox="0 0 24 24">
+                            <path class="check-mark" fill="none" stroke="currentColor" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                    <div class="cube-face back bg-accent/10 border-2 border-accent/50 rounded-lg"></div>
+                    <div class="cube-face right bg-accent/15 border-2 border-accent/60 rounded-lg"></div>
+                    <div class="cube-face left bg-accent/15 border-2 border-accent/60 rounded-lg"></div>
+                    <div class="cube-face top bg-accent/20 border-2 border-accent/70 rounded-lg"></div>
+                    <div class="cube-face bottom bg-accent/10 border-2 border-accent/50 rounded-lg"></div>
+                </div>
+            </div>
+
+            <!-- Thank You Message -->
+            <div class="text-center md:text-left md:flex-1">
+                <h1 class="text-4xl md:text-5xl font-bold text-accent-alt mb-4 animate-pulse-slow">Thank You!</h1>
+                <p class="text-text-primary text-lg mb-6">Your email has been sent successfully. We appreciate your message and will get back to you shortly.</p>
+                <p class="text-text-secondary mb-8">i will reviewing your inquiry and will respond within 24-48 hours.</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="index.html" class="px-6 py-3 bg-secondary hover:bg-secondary/80 text-text-primary rounded-lg transition-all duration-300 text-center">
+                        Return Home
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <!-- Decorative Elements -->
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none overflow-hidden -z-10">
+        <!-- Gradient Background -->
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary via-primary to-secondary/50 opacity-80"></div>
+        
+        <!-- Animated Particles -->
+        <div class="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-accent/5 animate-pulse-slow"></div>
+        <div class="absolute bottom-1/3 right-1/4 w-48 h-48 rounded-full bg-accent/10 animate-float"></div>
+        <div class="absolute top-2/3 right-1/3 w-24 h-24 rounded-full bg-accent-alt/5 animate-pulse-slow"></div>
+    </div>
+</body>
+</html>
