@@ -923,6 +923,11 @@ nav ul li a.active::after {
   color: var(--text-secondary);
   font-size: 0.9rem;
 }
+#footer a {
+
+  color: var(--secondary-color);
+    font-size: 0.9rem;
+}
 
 /* Buttons */
 .btn {
