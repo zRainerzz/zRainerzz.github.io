@@ -160,24 +160,18 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  // Contact form submission
-  const contactForm = document.getElementById("contact-form");
-  if (contactForm) {
-    contactForm.addEventListener("submit", e => {
-      e.preventDefault();
-      
-      // Here you would normally send the form data to a server
-      // For now, just show a success message
-      alert("Message sent successfully! We will get back to you soon.");
-      
-      // Reset form
-      contactForm.reset();
-    });
+  // Keep the footer copyright year current automatically
+  const currentYearEl = document.getElementById("current-year");
+  if (currentYearEl) {
+    currentYearEl.textContent = new Date().getFullYear();
   }
 
   // Initialize scroll animations
   initScrollAnimations();
 });
+
+// Respect the user's reduced-motion preference
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 // Initialize scroll animations
 function initScrollAnimations() {
@@ -288,10 +282,10 @@ function initScene() {
 
     particlesGeometry.setAttribute("position", new THREE.BufferAttribute(posArray, 3));
 
-    // Updated particle color to match your new accent color (purple)
+    // Particle color matches the purple accent color
     const particlesMaterial = new THREE.PointsMaterial({
       size: 0.02,
-      color: 064420, // Updated to match new purple accent color
+      color: 0x3d1dcf,
       transparent: true,
       opacity: 0.8,
     });
@@ -305,25 +299,27 @@ function initScene() {
       controls.enableDamping = true;
       controls.dampingFactor = 0.05;
       controls.enableZoom = false;
-      controls.autoRotate = true;
+      controls.autoRotate = !prefersReducedMotion;
       controls.autoRotateSpeed = 0.5;
-      
+      const driftSpeed = prefersReducedMotion ? 0 : 0.0005;
+
       // Animation loop with controls
       function animateWithControls() {
         requestAnimationFrame(animateWithControls);
-        particlesMesh.rotation.x += 0.0005;
-        particlesMesh.rotation.y += 0.0005;
+        particlesMesh.rotation.x += driftSpeed;
+        particlesMesh.rotation.y += driftSpeed;
         controls.update();
         renderer.render(scene, camera);
       }
       
       animateWithControls();
     } else {
+      const driftSpeed = prefersReducedMotion ? 0 : 0.0005;
       // Animation loop without controls
       function animate() {
         requestAnimationFrame(animate);
-        particlesMesh.rotation.x += 0.0005;
-        particlesMesh.rotation.y += 0.0005;
+        particlesMesh.rotation.x += driftSpeed;
+        particlesMesh.rotation.y += driftSpeed;
         renderer.render(scene, camera);
       }
       
@@ -350,4 +346,4 @@ function initScene() {
 window.addEventListener("load", function() {
   // Start the loading screen animation
   initLoadingScreen();
-});
+});%                                                                                                                                                                                                               
