@@ -346,4 +346,4 @@ function initScene() {
 window.addEventListener("load", function() {
   // Start the loading screen animation
   initLoadingScreen();
-});%                                                                                                                                                                                                               
+});                                                                                                                                                                                                              
